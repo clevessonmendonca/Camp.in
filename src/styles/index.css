@@ -1,0 +1,140 @@
+input[type="email"] {
+    background: url(/src/assets/images/mail.svg) no-repeat left 10px center;
+}
+
+input[type="password"], #password {
+    background: url(/src/assets/images/lock.svg) no-repeat left 10px center;
+    width: 100%;
+}
+
+.eye-password {
+    background: url(/src/assets/images/eye.svg) no-repeat right;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    right: 31px;
+}
+
+input[type="email"]:focus {
+    background: url(/src/assets/images/mail-focus.svg) no-repeat left 10px center;
+}
+
+input[type="password"]:focus {
+    background: url(/src/assets/images/lock-focus.svg) no-repeat left 10px center;
+}
+
+input:focus {
+    background-color: var(--background);
+    border: 3px solid var(--primary-color);
+}
+
+.checkmark {
+    display: flex;
+    gap: 10px;
+}
+
+.checkmark input {
+    display: none;
+}
+
+.checkmark span {
+    width: 12px;
+    height: 12px;
+    padding: 10px;
+    display: block;
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.checkmark input:checked + span {
+    background-image: url(/src/assets/images/check.svg);
+    background-color: var(--primary-color);
+    outline: 0;
+    border: 0;
+}
+
+.text-title {
+    font-size: 24px;
+    color: var(--text-title);
+}
+
+.button-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    background: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* --- CSS --- */
+
+.container, .card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container .card-header .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-style: var(--text-base);
+}
+
+.container .card-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container .card-form .password-options{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.container .card-form .submit {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.container .register {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.container-image {
+    display: none;
+}
+
+@media ( min-width: 900px ) {
+    body {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    main .card {
+        background: var(--form-background);
+    }    
+
+    .container, .card {
+        padding: 40px 40px;
+        width: 100%;
+    }
+
+    .container-image {
+        display: block;
+    }  
+    .container-image img {
+        width: 100%;
+        height: 100vh;
+    }  
+}
